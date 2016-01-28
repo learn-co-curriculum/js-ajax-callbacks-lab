@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ajax Lab</title>
+
+    <style>
+      .noun {
+        padding: 0 20px;
+        font-weight: bold;
+        border-bottom: 1px solid red;
+        color: red;
+      }
+
+      .verb {
+        padding: 0 20px;
+        font-weight: bold;
+        border-bottom: 1px solid blue;
+        color: blue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p>
+    Today I went to the <span class="noun"></span>.
+    While I was there, I decided to <span class="verb"></span>.
+    As I <span class="verb"></span> the <span class="noun"></span>,
+    I decided it was a perfect time to <span class="verb"></span>.
+    </p>
+
+    <div>
+      <input id="random_noun" type="button" value="Pick Nouns"/>
+      <input id="random_verb" type="button" value="Pick Verbs"/>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
