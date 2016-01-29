@@ -25,3 +25,5 @@ index.html should have a button for each noun and each verb - click events attac
 
 Needs tests
 
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/js-ajax-callbacks-lab' title='Ajax Lab'>Ajax Lab</a> on Learn.co and start learning to code for free.</p>
