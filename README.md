@@ -15,6 +15,7 @@ Hopefully when we are done we will have made the world a better place.
 Note: It's recommended you run `python -m SimpleHTTPServer` in your lab folder to start a simple server to host your files.
 
 ## Instructions
+
 All of the HTML and javascript files have been provided. The file `index.html` has the mad lib UI. You will be adding your code to ```script.js```. There are also Jasemine tests under `specs` that you can run by loading the `SpecRunner.html` file in Firefox to test your work.
 
 1. When a user clicks the noun button, load the words from the
@@ -30,3 +31,7 @@ All of the HTML and javascript files have been provided. The file `index.html` h
 ### Errors
 1. Add a callback to handle errors. The error should alert the user something went wrong and display the error.
 2. In order to test that this works, replace the url in `.get` to the non-existent `words.html` file.
+
+### Resources
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/js-ajax-callbacks-lab' title='Ajax Lab'>Ajax Lab</a> on Learn.co and start learning to code for free.</p>
