@@ -6,9 +6,9 @@
 + Use `error` callback
 
 ## Intro
-Let's test out our new Ajax skills by making a "Mad Lib" Maker. [Mad Libs](http://www.madlibs.com/) are paragraphs of text where certain verbs and nouns are missing. It's the job of the reader to pick random words to fill these gaps. The result is usually riduculous and makes for a good laugh.
+Let's test out our new Ajax skills by making a "Mad Lib" Maker. [Mad Libs](http://www.madlibs.com/) are paragraphs of text where certain verbs and nouns are missing. It's the job of the reader to pick random words to fill these gaps. The result is usually ridiculous and makes for a good laugh.
 
-For our Mad Lib maker, we will have a static sentence that will include blanks for one missing noun and one missing verb. The HTML page will also have two associated buttons, one for nouns and one for verbs.  When the user clicks the button, we will load words from an external HTML file using ajax and randomly select a word to add to the sentence.
+For our Mad Lib maker, we will have a static sentence that will include blanks for one missing noun and one missing verb. The HTML page will also have two associated buttons, one for nouns and one for verbs.  When the user clicks the button, we will load words from an external HTML file using Ajax and randomly select a word to add to the sentence.
 
 Hopefully when we are done we will have made the world a better place.
 
@@ -16,7 +16,7 @@ Note: It's recommended you run `python -m SimpleHTTPServer` in your lab folder t
 
 ## Instructions
 
-All of the HTML and javascript files have been provided. The file `index.html` has the mad lib UI. You will be adding your code to `script.js`. There are also Jasemine tests under `specs` that you can run by loading the `SpecRunner.html` file in Firefox to test your work.
+All of the HTML and Javascript files have been provided. The file `index.html` has the mad lib UI. You will be adding your code to `script.js`. There are also Jasmine tests under `specs` that you can run by loading the `SpecRunner.html` file in Firefox to test your work.
 
 1. When a user clicks the noun button, load the words from the
    `noun.html`.
