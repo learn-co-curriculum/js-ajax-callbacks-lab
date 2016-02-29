@@ -16,7 +16,9 @@ Note: It's recommended you run `python -m SimpleHTTPServer` in your lab folder t
 
 ## Instructions
 
-All of the HTML and Javascript files have been provided. The file `index.html` has the mad lib UI. You will be adding your code to `script.js`. There are also Jasmine tests under `specs` that you can run by loading the `SpecRunner.html` file in Firefox to test your work.
+All of the HTML and Javascript files have been provided. The file `index.html` has the mad lib UI. You will be adding your code to `script.js`.
+
+There are also Jasmine tests under `specs` that you can run by running `npm test`. (Be sure to run `npm install` before your first test run.)
 
 1. When a user clicks the noun button, load the words from the
    `noun.html`.
