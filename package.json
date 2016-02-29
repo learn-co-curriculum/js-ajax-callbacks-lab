@@ -1,0 +1,22 @@
+{
+  "name": "js-ajax-callbacks-lab",
+  "version": "1.0.0",
+  "description": "Flatiron School lab for testing AJAX callbacks",
+  "main": "js/script.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/learn-co-curriculum/js-ajax-callbacks-lab.git"
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/learn-co-curriculum/js-ajax-callbacks-lab/issues"
+  },
+  "homepage": "https://github.com/learn-co-curriculum/js-ajax-callbacks-lab#readme",
+  "devDependencies": {
+    "jasmine": "^2.4.1",
+    "jsdom": "^8.0.4"
+  }
+}

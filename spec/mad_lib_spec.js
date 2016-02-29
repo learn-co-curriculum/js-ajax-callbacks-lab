@@ -1,6 +1,25 @@
+var fs = require('fs');
+var jsdom = require('jsdom');
+var path = require('path');
+
 describe("MadLib", function() {
-  beforeEach(function() {
-    setFixtures('<p> Today I went to the <span class="noun"></span>.  While I was there, I decided to <span class="verb"></span>.  As I <span class="verb"></span> the <span class="noun"></span>, I decided it was a perfect time to <span class="verb"></span>.  </p> <div> <input id="random_noun" type="button" value="Pick Nouns"/> <input id="random_verb" type="button" value="Pick Verbs"/> </div>');
+  var $, replaceNouns, replaceVerbs, window;
+
+  beforeAll(function(done) {
+    var html = fs.readFileSync(path.resolve(__dirname, '..', 'index.html'));
+    var scriptJs = path.resolve(__dirname, '..', 'js', 'script.js');
+
+    window = jsdom.jsdom(html, {
+      scripts: [scriptJs]
+    }).defaultView;
+
+    jsdom.jQueryify(window, 'http://code.jquery.com/jquery-2.1.1.js', function() {
+      $ = window.$;
+      replaceNouns = window.replaceNouns;
+      replaceVerbs = window.replaceVerbs;
+
+      done();
+    });
   });
 
   it("should replace verbs", function() {
@@ -13,8 +32,7 @@ describe("MadLib", function() {
     replaceVerbs();
 
     expectedVerb = $(".verb").first().text();
-    expect(verbs.includes(expectedVerb)).toBe(true)
-
+    expect(verbs.indexOf(expectedVerb)).toBeGreaterThan(-1)
   });
 
   it("should replace nouns", function() {
@@ -27,8 +45,7 @@ describe("MadLib", function() {
 
     replaceNouns();
     expectedNoun = $(".noun").first().text();
-    expect(nouns.includes(expectedNoun)).toBe(true)
+    expect(nouns.indexOf(expectedNoun)).toBeGreaterThan(-1)
   });
 
 });
-
