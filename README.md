@@ -16,7 +16,7 @@ Note: It's recommended you run `python -m SimpleHTTPServer` in your lab folder t
 
 ## Instructions
 
-All of the HTML and Javascript files have been provided. The file `index.html` has the mad lib UI. You will be adding your code to `script.js`. You can run the tests by entering `learn` or `learn-b` in terminal.
+All of the HTML and Javascript files have been provided. The file `index.html` has the mad lib UI. You will be adding your code to `script.js`. You can run the tests by entering `learn` or `learn -b` in terminal.
 
 1. When a user clicks the noun button, load the words from the
    `noun.html`.
