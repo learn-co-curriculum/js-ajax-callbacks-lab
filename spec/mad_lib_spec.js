@@ -12,9 +12,10 @@ describe("MadLib", function() {
 
     replaceVerbs();
 
-    expectedVerb = $(".verb").first().text();
-    expect(verbs.indexOf(expectedVerb)).not.toEqual(-1);
+    var expectedVerbs = $(".verb");
 
+    expect(verbs.indexOf($(expectedVerbs[0]).text())).not.toEqual(-1);
+    expect(verbs.indexOf($(expectedVerbs[1]).text())).not.toEqual(-1);
   });
 
   it("should replace nouns", function() {
@@ -26,9 +27,10 @@ describe("MadLib", function() {
     });
 
     replaceNouns();
-    expectedNoun = $(".noun").first().text();
-    expect(nouns.indexOf(expectedNoun)).not.toEqual(-1);
+
+    var expectedNouns = $(".noun");
+
+    expect(nouns.indexOf($(expectedNouns[0]).text())).not.toEqual(-1);
+    expect(nouns.indexOf($(expectedNouns[1]).text())).not.toEqual(-1);
   });
-
 });
-
