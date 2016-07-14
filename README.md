@@ -1,37 +1,54 @@
 # Ajax Lab
 
 ## Objectives
+
 + Use Ajax `get` method
 + Use `success` callback
 + Use `error` callback
++ Read API documentation
++ Use Handlebars templates to render responses.
 
-## Intro
-Let's test out our new Ajax skills by making a "Mad Lib" Maker. [Mad Libs](http://www.madlibs.com/) are paragraphs of text where certain verbs and nouns are missing. It's the job of the reader to pick random words to fill these gaps. The result is usually ridiculous and makes for a good laugh.
+## Introduction
 
-For our Mad Lib maker, we will have a static sentence that will include blanks for one missing noun and one missing verb. The HTML page will also have two associated buttons, one for nouns and one for verbs.  When the user clicks the button, we will load words from an external HTML file using Ajax and randomly select a word to add to the sentence.
+Let's our new Ajax skills to work by making a Github repository search
+client. This lab will test your ability to use jQuery's `$.get` function with callbacks, and give you some more practice reading API documentation.
 
-Hopefully when we are done we will have made the world a better place.
+We're also going to practice using Handlebars templates with Ajax,
+and bringing these tools altogether to create a dynamic application.
 
-Note: It's recommended you run `python -m SimpleHTTPServer` in your lab folder to start a simple server to host your files.
+All of the HTML and javascript files have been provided. The file `index.html` has a basic two column structure, and you'll add your JavaScript code to `script.js`. There are also tests, so don't forget to run them, and load your page up in the browser to make sure everything's working!
 
 ## Instructions
 
-All of the HTML and Javascript files have been provided. The file `index.html` has the mad lib UI. You will be adding your code to `script.js`. You can run the tests by entering `learn` or `learn -b` in terminal.
+We're making a Github repository search client. It should take a user's
+search terms, query the Github search API for repositories, and display
+the results in the left-hand column. The user can then click various
+links in each repository to get more detailed information in the
+right-hand column.
 
-1. When a user clicks the noun button, load the words from the
-   `noun.html`.
-2. Randomly select a word for each blank noun in the phrase.
-3. Insert the noun into each noun `span`.
-4. When a user clicks the verb button, load the words from the
-   `verb.html`.
-5. Randomly select a word for each blank verb in the phrase.
-6. Insert the verb into each verb `span`.
-7. Bind a click event to the verb button.
+1. Create a "Search Repositories" link that calls a `searchRepositories`
+   function on click, takes the value of a `searchTerms` text input and queries the
+Github repository search API.
+2. Display the collection of repositories inside the `results` div.
+   Include repository name, description, and a link to the html url.
+Also include repository owner login, repository owner
+avatar as an image, and a link to the owner's profile page. **Hint:**
+Pay close attention to the structure of the search results!
+3. Add a "Show Commits" link to each repository result that will call a `showCommits` function
+   that gets the repository's commitss from the Github API and display them in the `details` div. For each commit, list the SHA, the author, the author's login, and the author's avatar as an image.
+4. Handle errors on each API call. If `$.get` fails, call a function
+   `displayError` and display "I'm sorry, there's been
+   an error. Please try again." in the `errors` div.
+**Hint:** You can test your error callbacks by turning off wi-fi or
+temporarily changing the URL you use in the `$.get` request.
+5. Use Handlebars templates to render your results instead of
+building your HTML in your JavaScript functions. Extract the user data
+sections into a partial called `userDetails` that can be reused for both the repository
+results and the commits. Register the partial in the provided
+`handlebarsSetup` function.
 
-### Errors
-1. Add a callback to handle errors. The error should alert the user something went wrong and display the error.
-2. In order to test that this works, replace the url in `.get` to the non-existent `words.html` file.
+## Resources
 
-### Resources
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/js-ajax-callbacks-lab' title='Ajax Lab'>Ajax Lab</a> on Learn.co and start learning to code for free.</p>
+- [jQuery.get](http://api.jquery.com/jquery.get/)
+- [Github API](https://developer.github.com/v3/)
+- [Handlebars](http://handlebarsjs.com/)

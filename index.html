@@ -4,36 +4,36 @@
     <title>Ajax Lab</title>
 
     <style>
-      .noun {
-        padding: 0 20px;
-        font-weight: bold;
-        border-bottom: 1px solid red;
-        color: red;
+      .flexbox-container {
+        display: -ms-flex;
+        display: -webkit-flex;
+        display: flex;
       }
-
-      .verb {
-        padding: 0 20px;
-        font-weight: bold;
-        border-bottom: 1px solid blue;
-        color: blue;
+      .flexbox-container > div {
+        width: 50%;
+        padding: 10px;
+      }
+      .flexbox-container > div:first-child {
+        margin-right: 20px;
       }
     </style>
   </head>
-
   <body>
-    <p>
-    Today I went to the <span class="noun"></span>.
-    While I was there, I decided to <span class="verb"></span>.
-    As I <span class="verb"></span> the <span class="noun"></span>,
-    I decided it was a perfect time to <span class="verb"></span>.
-    </p>
-
-    <div>
-      <input id="random_noun" type="button" value="Pick Nouns"/>
-      <input id="random_verb" type="button" value="Pick Verbs"/>
+    <main id="main">
+      <div id="errors"></div>
+    </main>
+    <div class="flexbox-container">
+      <div>
+        <h3>Repositories</h3>
+        <div id="results"></div>
+      </div>
+      <div>
+        <h3>Details</h3>
+        <div id="details"></div>
+      </div>
     </div>
-
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="jquery-3.1.0.min.js"></script>
+    <script src="handlebars.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
