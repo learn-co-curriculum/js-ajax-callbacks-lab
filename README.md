@@ -10,7 +10,11 @@
 
 ## Introduction
 
+<<<<<<< HEAD
 Let's our new Ajax skills to work by making a Github repository search
+=======
+Let's use our new Ajax skills to work by making a Github repository search
+>>>>>>> master
 client. This lab will test your ability to use jQuery's `$.get` function with callbacks, and give you some more practice reading API documentation.
 
 We're also going to practice using Handlebars templates with Ajax,
@@ -52,3 +56,6 @@ results and the commits. Register the partial in the provided
 - [jQuery.get](http://api.jquery.com/jquery.get/)
 - [Github API](https://developer.github.com/v3/)
 - [Handlebars](http://handlebarsjs.com/)
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/js-ajax-callbacks-lab'>Reading from the GitHub API with jQuery AJAX Lab</a> on Learn.co and start learning to code for free.</p>
+
