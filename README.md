@@ -16,7 +16,7 @@ client. This lab will test your ability to use jQuery's `$.get` function with ca
 We're also going to practice using Handlebars templates with Ajax,
 and bringing these tools altogether to create a dynamic application.
 
-All of the HTML and javascript files have been provided. The file `index.html` has a basic two column structure, and you'll add your JavaScript code to `script.js`. There are also tests, so don't forget to run them, and load your page up in the browser to make sure everything's working!
+All of the HTML and javascript files have been provided. The file `index.html` has a basic two column structure, and you'll add your JavaScript code to `index.js`. There are also tests, so don't forget to run them, and load your page up in the browser to make sure everything's working!
 
 ## Instructions
 
