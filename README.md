@@ -31,5 +31,8 @@ We're making a GitHub repository search client. It should take a user's search t
 - [jQuery.get](http://api.jquery.com/jquery.get/)
 - [GitHub API](https://developer.github.com/v3/)
 - [Handlebars](http://handlebarsjs.com/)
+- [jQuery, AJAX Tutorial](https://www.youtube.com/playlist?list=PLoYCgNOIyGABdI2V8I_SWo22tFpgh2s6_), [Tutorial Solution](https://github.com/kaileeagray/learn_code_academy_jquery)
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/js-ajax-callbacks-lab' title='AJAX and Callbacks Lab'>AJAX and Callbacks Lab</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/js-ajax-callbacks-lab'>AJAX and Callbacks Lab</a> on Learn.co and start learning to code for free.</p>
