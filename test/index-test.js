@@ -1,37 +1,19 @@
-const expect = require('expect')
-
-const fs = require('fs')
-const jsdom = require('mocha-jsdom')
-const path = require('path')
-var sinon = require('sinon')
+const expect = chai.expect;
 
 describe('index.js', () => {
-  const html = fs.readFileSync(path.resolve(__dirname, '..', 'index.html'), 'utf-8')
-  const scripts = [
-    path.resolve(__dirname, '..', 'index.js'),
-    path.resolve(__dirname, '..', 'jquery-3.1.0.min.js')
-  ]
-
-  let $
-  jsdom({ html, scripts })
-
-  before(() => {
-    window.$ = require('jquery')
-  })
-
   describe('index.html', () => {
     it('has the right elements', () => {
-      expect(document.getElementsByTagName('a')[0].innerHTML).toMatch(/(S|s)earch/)
-      expect(document.getElementById('searchTerms')).toExist()
-      expect(document.getElementById('results')).toExist()
-      expect(document.getElementById('details')).toExist()
+      expect(document.getElementsByTagName('a')[0].innerHTML).to.match(/(S|s)earch/)
+      expect(document.getElementById('searchTerms')).to.exist
+      expect(document.getElementById('results')).to.exist
+      expect(document.getElementById('details')).to.exist
     })
   })
 
   describe('displayError', () => {
     it('sets the errors div content', () => {
       displayError()
-      expect(window.$('#errors').html()).toMatch(/error/)
+      expect(window.$('#errors').html()).to.match(/error/)
     })
   })
 
@@ -55,8 +37,8 @@ describe('index.js', () => {
         window.$('#searchTerms').val('tetris')
         searchRepositories()
         requests[0].respond(200, contentType, resultsData())
-        expect(requests[0].url).toMatch(/https:\/\/api.github.com\/search\/repositories\?q=tetris/)
-        expect(window.$('#results').html()).toMatch(/Tetris/)
+        expect(requests[0].url).to.match(/https:\/\/api.github.com\/search\/repositories\?q=tetris/)
+        expect(window.$('#results').html()).to.match(/Tetris/)
       })
     })
 
@@ -65,8 +47,8 @@ describe('index.js', () => {
         const el = { dataset: { repository: "repo", owner: "owner" } }
         showCommits(el)
         requests[0].respond(200, contentType, commitsData())
-        expect(requests[0].url).toMatch(/https:\/\/api.github.com\/repos\/owner\/repo\/commits/)
-        expect(window.$('#details').html()).toMatch(/6dcb09b5b57875f334f61aebed695e2e4193db5e/)
+        expect(requests[0].url).to.match(/https:\/\/api.github.com\/repos\/owner\/repo\/commits/)
+        expect(window.$('#details').html()).to.match(/6dcb09b5b57875f334f61aebed695e2e4193db5e/)
       })
     })
   })
